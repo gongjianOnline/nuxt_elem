@@ -1,12 +1,16 @@
+/**订单页 */
 <template>
   <div class="wrapper">
-      订单页
+    <elHeader title="订单页"></elHeader>
   </div>
 </template>
 
 <script>
+import elHeader from "~/components/header"
 export default {
-  components:{},
+  components:{
+    elHeader:elHeader
+  },
   props:{},
   data(){
     return {

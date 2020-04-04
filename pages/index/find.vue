@@ -1,12 +1,16 @@
+/**发现 */
 <template>
   <div class="wrapper">
-      发现页
+    <elHeader title="发现"></elHeader>
   </div>
 </template>
 
 <script>
+import elHeader from "~/components/header"
 export default {
-  components:{},
+  components:{
+    elHeader:elHeader
+  },
   props:{},
   data(){
     return {

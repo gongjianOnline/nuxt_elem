@@ -1,12 +1,15 @@
 <template>
   <div class="wrapper">
-      我的
+    <elHeader title="我的"></elHeader>
   </div>
 </template>
 
 <script>
+import elHeader from "~/components/header"
 export default {
-  components:{},
+  components:{
+    elHeader:elHeader
+  },
   props:{},
   data(){
     return {

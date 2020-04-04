@@ -1,12 +1,10 @@
 <template>
   <div class="wrapper">
-    
     <nuxt/>
-    
     <!-- 底部导航栏 -->
     <div>
       <mt-tabbar v-model="selected" @change="muenBtn">
-        <mt-tab-item id="index-home" @click.native="muenBtn">
+        <mt-tab-item id="index" @click.native="muenBtn">
           <div class="icon_changyonglogo40">
             <i class="iconfont icon-changyonglogo40"></i>
           </div>
@@ -41,7 +39,7 @@ export default {
   props:{},
   data(){
     return {
-      selected:'index-home'
+      selected:'index'
     }
   },
   watch:{},
@@ -51,8 +49,8 @@ export default {
     console.log(this.$route)
   },
   methods:{
+    /**底部菜单页面跳转 */
     muenBtn(){
-      console.log("123456")
       this.$router.push({
         name:this.selected
       })
@@ -70,4 +68,5 @@ export default {
 .icon_div >i{
   font-size: 20px;
 }
+
 </style>

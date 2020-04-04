@@ -43,6 +43,8 @@ export default {
   ** Build configuration
   */
   build: {
+    /**配置elementUI */
+    vendor: ['element-ui'],
     /*
     ** You can extend webpack config here
     */
@@ -69,13 +71,17 @@ export default {
   plugins: [
     { src: '~plugins/mint-ui', ssr: true },
      // ssr: Boolean (默认为 true) 如果值为 false，该文件只会在客户端被打包引入
-    { src: '@/assets/js/iconfont.js', ssr: false }
+    { src: '@/assets/js/iconfont.js', ssr: false },
+    //配置elementUI
+    { src:'~plugins/element-ui',ssr:false}
   ],
   css: [
     // 全部引用的时候需要用到
     'mint-ui/lib/style.css',
     //引入矢量图标
-    '@/assets/css/iconfont.css'
+    '@/assets/css/iconfont.css',
+    //全局引入element-ui
+    'element-ui/lib/theme-chalk/index.css'
   ]
 
 
