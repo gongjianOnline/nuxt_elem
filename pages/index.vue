@@ -2,7 +2,7 @@
   <div class="wrapper">
     <nuxt/>
     <!-- 底部导航栏 -->
-    <div>
+    <div class="tabbar_div">
       <mt-tabbar v-model="selected" @change="muenBtn">
         <mt-tab-item id="index" @click.native="muenBtn">
           <div class="icon_changyonglogo40">
@@ -68,5 +68,8 @@ export default {
 .icon_div >i{
   font-size: 20px;
 }
-
+/**底部导航栏修复 */
+.tabbar_div >>> .mint-tabbar{
+  position: fixed;
+}
 </style>

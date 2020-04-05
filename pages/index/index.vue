@@ -1,7 +1,7 @@
 /**首页 */
 <template>
   <div class="wrapper">
-    <elHeader title="广阳区"></elHeader>
+    <elHeader title="广阳区" right_ico="icon-sousuo"  right_icoRout="search"></elHeader>
     <div class="view_div">
       <!-- 头部菜单 -->
       <div>
@@ -115,8 +115,10 @@
                 <span>{{item.expected_time}}分钟</span>
               </div>
             </div>
-
           </div>
+        </div>
+        <div class="standing_div">
+          已经到底了~
         </div>
 
 
@@ -154,6 +156,19 @@ export default {
           isontime:true,//是否准时
           distance:50,//距离
           expected_time:20//预计时间
+        },
+        {
+          title:'宜客快餐',
+          img:require('../../assets/home/recommend/img1.png'),
+          score:2.5,
+          sales:200,
+          pickup:10,
+          delivery:5,
+          guarantee:'保准票',
+          isProfession:false,
+          isontime:true,
+          distance:20,
+          expected_time:15,
         },
         {
           title:'宜客快餐',
@@ -273,6 +288,9 @@ export default {
   border:1px solid #1070ff;
   padding: 0px 5px 0px 5px;
 }
+.propaganda_type{
+  width: 40%;
+}
 .propaganda_type>div{
   text-align: right;
   padding-right: 5px;
@@ -292,5 +310,15 @@ export default {
 }
 .propaganda_type>div:nth-child(3)>span:nth-child(2){
   color:#1070ff
+}
+/**站位符 */
+.standing_div{
+  width: 100%;
+  height: 200px;
+  font-size: 18px;
+  background-color:#eee;
+  text-align: center;
+  line-height: 150px;
+  color: #ccc;
 }
 </style>

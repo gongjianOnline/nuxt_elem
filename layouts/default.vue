@@ -5,6 +5,13 @@
 </template>
 
 <style>
+/* 视图div */
+.view_div{
+  margin-top: 40px;
+  height: 90%;
+  overflow: auto;
+}
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;

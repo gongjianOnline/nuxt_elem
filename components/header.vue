@@ -2,10 +2,10 @@
 <template>
   <div class="wrapper">
     <mt-header fixed :title="title" >
-      <nuxt-link to="/" slot="left" class="iconfont">
+      <nuxt-link :to="{name:left_icoRout}" slot="left" class="iconfont">
         <i :class="left_ico" class="iconfont"></i>
       </nuxt-link>
-      <nuxt-link to="/" slot="right" class="iconfont">
+      <nuxt-link :to="{name:right_icoRout}" slot="right" class="iconfont">
         <i :class="right_ico" class="iconfont"></i>
       </nuxt-link>
     </mt-header>
@@ -24,7 +24,13 @@ export default {
     left_ico:{
       default:""
     },
+    left_icoRout:{
+      default:""
+    },
     right_ico:{
+      default:""
+    },
+    right_icoRout:{
       default:""
     }
   },
@@ -42,5 +48,8 @@ export default {
 <style scoped>
 .iconfont{
   text-decoration: none;
+}
+.wrapper >>>.mint-header-title{
+  overflow:visible
 }
 </style>
