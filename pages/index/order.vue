@@ -8,7 +8,7 @@
       </div>
       <div class="content"> 
         <p>登录后查看外卖订单</p>
-        <el-button type="success">立即登录</el-button>
+        <el-button type="success" @click="loginFun">立即登录</el-button>
       </div>
 
     </div>
@@ -33,7 +33,14 @@ export default {
   computed:{},
   created(){},
   mounted(){},
-  methods:{},
+  methods:{
+    /**跳转登录 */
+    loginFun(){
+      this.$router.push({
+        name:"login"
+      })
+    }
+  },
 }
 </script>
 <style scoped>

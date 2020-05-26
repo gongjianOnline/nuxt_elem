@@ -8,8 +8,8 @@
           <img :src="require('../../assets/mine/user_logo.png')" alt="">
         </div>
         <div class="user-state">
-          <div>登录/注册</div>
-          <div>登录后享受更多特权</div>
+          <div @click="loginFun">登录/注册</div>
+          <div @click="loginFun">登录后享受更多特权</div>
         </div>
         <div class="user-out">
           >
@@ -33,7 +33,9 @@
 
       <div class="container-marginTop module"> 
         <div class="text-content">
-          <div>ico</div>
+          <div>
+            <img src="../../assets/mine/location.png" alt="">
+          </div>
           <div>我的地址</div>
         </div>
         <div class="ico-content">></div>
@@ -42,14 +44,18 @@
       <div class="container-marginTop">
         <div class="module bottom-border"> 
           <div class="text-content">
-            <div>ico</div>
+            <div>
+              <img src="../../assets/mine/shopping.png" alt="">
+            </div>
             <div>金币商城</div>
           </div>
           <div class="ico-content">></div>
         </div>
         <div class="module"> 
           <div class="text-content">
-            <div>ico</div>
+            <div>
+              <img src="../../assets/mine/gift.png" alt="">
+            </div>
             <div>分享拿10元现金</div>
           </div>
           <div class="ico-content">></div>
@@ -59,14 +65,18 @@
       <div class="container-marginTop">
         <div class="module bottom-border"> 
           <div class="text-content">
-            <div>ico</div>
+            <div>
+              <img src="../../assets/mine/customer.png" alt="">
+            </div>
             <div>我的客服</div>
           </div>
           <div class="ico-content">></div>
         </div>
         <div class="module"> 
           <div class="text-content">
-            <div>ico</div>
+            <div>
+              <img src="../../assets/mine/elem.png" alt="">
+            </div>
             <div>下载饿了么App</div>
           </div>
           <div class="ico-content">></div>
@@ -94,7 +104,16 @@ export default {
   computed:{},
   created(){},
   mounted(){},
-  methods:{},
+  methods:{
+
+    /**登录 */
+    loginFun(){
+      this.$router.push({
+        name:"login"
+      })
+    }
+
+  },
 }
 </script>
 <style scoped>
@@ -190,6 +209,9 @@ export default {
 }
 .text-content>div:nth-child(1){
   width: 40px;
+}
+.text-content img{
+  width: 28px;
 }
 .ico-content{
   margin-right: 10px;
