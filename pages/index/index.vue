@@ -82,7 +82,7 @@
 
         <!-- 产品列表 -->
         <div>
-          <div class="recommend_div_list" v-for="(item,index) in recommendList" :key="index">
+          <div class="recommend_div_list" v-for="(item,index) in recommendList" :key="index" @click="orderFun">
             <!-- logo -->
             <div>
               <img :src="item.img" alt="">
@@ -192,7 +192,13 @@ export default {
   computed:{},
   created(){},
   mounted(){},
-  methods:{},
+  methods:{
+    orderFun(){
+      this.$router.push({
+        name:"menu"
+      })
+    }
+  },
 }
 </script>
 <style scoped>
