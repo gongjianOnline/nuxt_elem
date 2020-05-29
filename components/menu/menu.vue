@@ -26,7 +26,7 @@
               <div>
                 <span>月售{{itemChild.salesVolume}}份</span> 
                 <span>好评率{{itemChild.evaluate}}%</span> </div>
-              <div>￥{{itemChild.price}}</div>
+              <div class="wares-unitPrice">￥{{itemChild.price}}</div>
             </div>
             <div class="wares-ico">
                 <div class="wares-ico-cut" @click="waresCutFun(itemChild)"
@@ -34,11 +34,24 @@
                 <div v-show="itemChild.num">{{itemChild.num}}</div>
                 <div class="wares-ico-add" @click="waresAddFun(itemChild)">+</div>
             </div>
-          
+      
           </div>
         </div>
       </div>
     </div>
+
+    <!-- 购物车 -->
+    <div class="shopping-contaner">
+      <div class="price-container"> 
+        <div class="price-container-carIco">
+          <i class="el-icon-shopping-cart-2"></i>
+        </div>
+        <div class="price-container-total">￥0元</div>
+        <div class="price-container-remarks">另其配送费￥4元</div>
+      </div>
+      <div class="price-container-difference">￥20元起送</div>
+    </div>
+
   </div>
 </template>
 
@@ -228,17 +241,17 @@ export default {
   display: flex;
   height: 50vh;
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-top: 20px;
 }
 .menu-content {
   width: 20%;
   background: #f8f8f8;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 .wares-content {
   width: 80%;
-  border: 1px solid rebeccapurple;
+  /* border: 1px solid rebeccapurple; */
   overflow: auto;
 }
 /**浏览器滚动条样式修改 */
@@ -251,7 +264,7 @@ export default {
   height: 40px;
   text-align: center;
   line-height: 40px;
-  border-bottom: 1px red solid;
+  /* border-bottom: 1px red solid; */
 }
 /**选中的颜色 */
 .menu-checked {
@@ -271,7 +284,7 @@ export default {
 }
 .wares-img{
   height: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
 }
@@ -289,9 +302,13 @@ export default {
   font-size: 16px;
   color: #000;
 }
+.wares-unitPrice{
+  font-size: 18px;
+  color:#ff5339;
+}
 .wares-ico{
   width: 80px;
-  border: 1px solid rebeccapurple;
+  /* border: 1px solid rebeccapurple; */
   display: flex;
   justify-content:space-around;
   align-items: flex-end;
@@ -300,7 +317,7 @@ export default {
 .wares-ico-cut{
   width: 18px;
   height: 18px;
-  border: 1px solid #409EFF;
+  /* border: 1px solid #409EFF; */
   color: #409EFF;
   border-radius: 50%;
   line-height: 14px;
@@ -319,4 +336,53 @@ export default {
   font-weight: bold;
   text-align: center;
 }
+
+/**购物车 */
+.shopping-contaner{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background:rgba(61,61,63,.9);
+  height: 8vh;
+  width: 100%;
+  color:hsla(0,0%,100%,.4);
+}
+.price-container{
+  display: flex;
+  margin-left: 10px;
+  position: relative;
+}
+.price-container-carIco{
+  width: 60px;
+  height: 60px;
+  background:rgba(61,61,63,.9);
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  text-align:center;
+  line-height: 60px;
+  font-size: 32px;
+  color: #fff;
+}
+.price-container-total{
+  margin-left: 65px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.price-container-remarks{
+  margin-left: 14px;
+  border-left: 2px hsla(0,0%,100%,.4) solid;
+  padding-left: 14px;
+}
+.price-container-difference{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 12px;
+}
+
 </style>

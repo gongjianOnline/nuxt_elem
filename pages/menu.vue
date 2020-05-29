@@ -38,25 +38,15 @@
       </mt-tab-container-item>
       <!-- 评价 -->
       <mt-tab-container-item id="2">
-        评价
+        <evaluate></evaluate>
       </mt-tab-container-item>
       <!-- 商家 -->
       <mt-tab-container-item id="3">
-        商家
+        <business></business>
       </mt-tab-container-item>
     </mt-tab-container>
     
-    <!-- 购物车 -->
-    <div class="shopping-contaner">
-      <div class="price-container"> 
-        <div class="price-container-carIco">
-          <i class="el-icon-shopping-cart-2"></i>
-        </div>
-        <div class="price-container-total">￥0元</div>
-        <div class="price-container-remarks">另其配送费￥4元</div>
-      </div>
-      <div class="price-container-difference">￥20元起送</div>
-    </div>
+    
 
 
   </div>
@@ -64,9 +54,13 @@
 
 <script>
 import menuList from "../components/menu/menu"
+import evaluate from "../components/menu/evaluate"
+import business from "../components/menu/business"
 export default {
   components: {
-    menuList
+    menuList,
+    evaluate,
+    business
   },
   props: {},
   data() {
@@ -238,7 +232,6 @@ export default {
 .banner-container{
   width: 100%;
   height: 120px;
-  border: 1px solid red;
   background-image: url('../assets/menu/banner.png');
   background-size: 100% 100%;
   margin-bottom: 20px;
